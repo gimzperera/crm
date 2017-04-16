@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: "Lato", sans-serif;
+    height:100%;
+    background-image:url(life.jpg);
+}
+#homes{
+    background-color:#83cdbe;}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid none;
+    background-color: #44b8b5;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #83cdbe;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #83cdbe;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid none;
+    border-top: none;
+}
+.title{
+	padding-left:20px;
+}
+/*Form values*/
+input[type=text], [type=url]{
+	width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+input[type=submit]{
+    width: 20%;
+    background-color: #03337f;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+	
+	
+}
+input[type=submit]:hover{
+    background-color: #6881a0;
+    color:Black;
+}
