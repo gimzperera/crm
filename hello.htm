@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Untitled Document</title>
+   </head>
+   <!--Bootstrap styles-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+   <!--Custom styles-->
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+   </head>
+   <body>
+      <div class="tab">
+         <button  id="homes" class="tablinks" onclick="openCity(event, 'home')">Home</button>
+         <button class="tablinks" onclick="openCity(event, 'customer')">Customers</button>
+         <button class="tablinks" onclick="openCity(event, 'contact')">Contacts</button>
+         <button class="tablinks" onclick="openCity(event, 'activity')">Activities</button>
+      </div>
+      <div id="home" class="tabcontent">
+         <h1>Welcome to Webnatics</h1>
+         <p align="justify"><strong>WEBNATICS</strong> – THE MEASURABLE DIGITAL PARTNER
+            Webnatics is the leading digital and search (engine marketing/optimization)agency in South East Asia with a strong track record across various industries.
+            We are a Google AdWords Premier SMB Partner and 
+            authorised Yahoo reseller with operations across 
+            Singapore, Malaysia, Thailand, Vietnam and Sri Lanka.<br /> 
+         <h4>Our Mission</h4>
+         As Webnatics, we are passionate and committed
+         to deliver a measurable, effective and ROI-driven
+         digital and search (engine marketing/optimization) 
+         <br /></p>
+      </div>
+      <div id="customer" class="tabcontent">
+         <div class="form">
+            <p><span class="error">* required field.</span></p>
+            <form action="http://localhost/php/customer_create.php" method="post" name="form">
+               <h3>Customer Details</h3>
+               <label for="fname">Company Name</label><br />
+               <input type="text" id="company_name" name="company_name" placeholder="Company name.." value="<?php echo $company_name; ?>" /><br/>
+               <label for="address">Address</label><br />
+               <input type="text" id="address" name="address" placeholder="Address"value="<?php echo $address; ?>"/><br/>
+               <label for="brn">business registration number</label><br />
+               <input type="text" id="brn" name="brn" placeholder="Business Registration number"value="<?php echo $brn; ?>"/><br />
+               <label for="brn">Website</label><br />
+               <input type="url" id="website" name="website" placeholder="Website"value="<?php echo $website; ?>" />
+               <div>
+                  <input type="submit" name="create" onclick="validate()" value="Create" />
+                  <input type="submit"  onclick="promptbox()" name="search" value="Search" />
+                  <input type="submit" name="edit" value="Edit" />
+                  <input type="submit" name="delete" value="Delete" />
+               </div>
+            </form>
+         </div>
+      </div>
+      <div id="contact" class="tabcontent">
+         <h3>Contact Details</h3>
+         <form action="http://localhost/php/contact.php" method="post" name="form1">
+            <label for="fname">Customer Name</label><br />
+            <input type="text" id="customer_name" name="customer_name" placeholder="Company name.." value="<?php echo $company_name; ?>" /><br/>
+            <label for="contact_name">Contact Name</label><br />
+            <input type="text" id="contact_name" name="contact_name" placeholder="contact_name"value="<?php echo $contact_name; ?>"/><br/>
+            <label for="email">Email</label><br />
+            <input type="text" id="email" name="email" placeholder="Email Registration number"value="<?php echo $email; ?>"/><br />
+            <label for="brn">Contact Number</label><br />
+            <input type="text" id="contact_no" name="contact_no" placeholder="Contact Number"value="<?php echo $contact_no; ?>" />
+            <input type="submit" name="create_contact" onclick="validate_contact()" value="Create" />
+            <input type="submit"  onclick="promptbox()" name="search_contact" value="Search" />
+            <input type="submit" name="edit_contact" value="Edit" />
+         </form>
+      </div>
+      <div id="activity" class="tabcontent">
+         <h3>Activity Details</h3>
+         <form action="http://localhost/php/activity.php" method="post" name="form2">
+            <label for="fname">Customer Name</label><br />
+            <input type="text" id="customers_name" name="customers_name" placeholder="Company name.." value="<?php echo $customers_name; ?>" /><br/>
+            <label for="date">Date</label><br />
+            <input type="date" id="date" name="date" value="<?php echo $date; ?>"/><br/>
+            <label for="type">Type</label><br />
+            <select name="type" id="type">
+               <option value="call">Call</option>
+               <option value="email">Email</option>
+               <option value="meeting">Meeting</option>
+            </select>
+            <br />
+            <label for="outcome">Outcome</label><br />
+            <input type="text" id="outcome" name="outcome" placeholder="Outcome"value="<?php echo $outcome; ?>" /><br />
+            <label for="outcome">Sales Person Name</label><br />
+            <input type="text" id="sales_person_name" name="sales_person_name" placeholder="sales_person_name"value="<?php echo $sales_person_name; ?>" />
+            <input type="submit" name="create_activity" onclick="validate_activity()" value="Create" />
+            <input type="submit"  onclick="promptbox()" name="search_activity" value="Search" />
+            <input type="submit" name="edit_activity" value="Edit" />
+         </form>
+      </div>
+      <script src="hello.js"></script>
+   </body>
+</html>
